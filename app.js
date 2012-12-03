@@ -7,8 +7,8 @@ var express = require('express')
   , routes = require('./routes')
   , user = require('./routes/user')
   , http = require('http')
-  , api = require('./routes/api')
   , knownodeAPI = require('./routes/knownodeAPI')
+  , userAPI = require('./routes/userAPI')
   , path = require('path');
 
 var app = express();
@@ -33,17 +33,14 @@ app.get('/', routes.index);
 app.get('/users', user.list);
 app.get('/partials/:name', routes.partials);
 
-app.get('/api/posts', api.posts);
-
-app.get('/api/post/:id', api.post);
-app.post('/api/post', api.addPost);
-app.put('/api/post/:id', api.editPost);
-app.delete('/api/post/:id', api.deletePost);
+app.get('/knownodeAPI/nodes', knownodeAPI.knownodes);
 
 app.get('/knownodeAPI/post/:id', knownodeAPI.knownode);
 app.post('/knownodeAPI/post', knownodeAPI.addKnownode);
 app.put('/knownodeAPI/post/:id', knownodeAPI.editKnownode);
 app.delete('/knownodeAPI/post/:id', knownodeAPI.deleteKnownode);
+
+app.post('/userAPI/addUser', userAPI.addUser);
 
 
 http.createServer(app).listen(app.get('port'), function(){

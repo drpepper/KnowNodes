@@ -19,6 +19,10 @@ angular.module('KnowNodesApp', ['KnowNodesApp.filters', 'KnowNodesApp.services',
             templateUrl: 'partials/index',
             controller: IndexCtrl
         }).
+        when('/addUser', {
+            templateUrl: 'partials/addUser',
+            controller: AddUserCtrl
+        }).
         when('/addPost', {
             templateUrl: 'partials/addPost',
             controller: AddPostCtrl

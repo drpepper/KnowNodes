@@ -1,0 +1,21 @@
+//
+   Created with JetBrains WebStorm.
+   User: Liad Magen
+   Date: 03/12/12
+   Time: 17:06
+
+h2 Add a new user
+p
+    label(for='firstname') First Name:
+    input(ng-model='form.firstname', name='firstname')
+p
+    label(for='lastname') Last Name:
+    input(ng-model='form.lastname', name='lastname')
+p
+    label(for='email') eMail:
+    input(ng-model='form.email', name='email')
+p
+    label(for='dob') DOB:
+    input(ng-model='form.dob', name='dob', ui-date='ui-date')
+p
+    button(ng-click='submitUser()') Submit Post

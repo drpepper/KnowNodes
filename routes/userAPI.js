@@ -4,23 +4,24 @@
 // GET
 var DB = require('../DB/knownodeDB');
 
-exports.knownodes = function (req, res) {
-    var nodes = [];
-    var data = new DB.Source;
+exports.users = function (req, res) {
+    var userList = [];
+    var data = new DB.User;
 
-    DB.Source.all(function(err){
-        data.forEach(function (node, i) {
-            nodes.push({
+    DB.User.all(function(err){
+        data.forEach(function (user, i) {
+            userList.push({
                 id: i,
-                nodeId: node.__ID__,
-                title: node.title,
-                url: node.url,
-                text: node.bodyText.substr(0, 50) + '...'
+                userId: user.__ID__,
+                email: user.email,
+                firstName: user.userFirstName,
+                lastName: user.userLastName,
+                DOB: user.DOB
             });
         });
 
         res.json({
-            nodes: nodes
+            nodes: userList
         });
     });
 };
@@ -42,10 +43,12 @@ exports.knownode = function (req, res) {
 };
 
 // POST
-exports.addKnownode = function (req, res) {
-    var edge = DB.schema.models.kn_Edge();
+exports.addUser = function (req, res) {
+    var user = new DB.User;
 
-    data.posts.push(req.body);
+    user.save(req.body);
+
+    //data.posts.push(req.body);
     res.json(req.body);
 };
 

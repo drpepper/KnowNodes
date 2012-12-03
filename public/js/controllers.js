@@ -19,6 +19,16 @@ MyCtrl1.$inject = [];
 function MyCtrl2() {}
 MyCtrl2.$inject = [];
 
+function AddUserCtrl($scope, $http, $location) {
+    $scope.form = {};
+    $scope.submitUser = function () {
+        $http.post('/userAPI/addUser', $scope.form).
+            success(function(data){
+                $location.path('/');
+            })
+    }
+}
+
 function IndexCtrl($scope, $http) {
   $http.get('/api/posts').
     success(function(data, status, headers, config) {
