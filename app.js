@@ -1,11 +1,10 @@
-
 /**
  * Module dependencies.
  */
 
 var express = require('express')
   , routes = require('./routes')
-  , user = require('./routes/user')
+  , Resource = require('express-resource')
   , http = require('http')
   , knownodeAPI = require('./routes/knownodeAPI')
   , userAPI = require('./routes/userAPI')
@@ -29,8 +28,11 @@ app.configure('development', function(){
   app.use(express.errorHandler());
 });
 
+
+app.resource('API/users', require('./routes/userAPI.js'));
+app.resource('API/knownodes', require('./routes/knownodeAPI.js'));
+
 app.get('/', routes.index);
-app.get('/users', user.list);
 app.get('/partials/:name', routes.partials);
 
 app.get('/knownodeAPI/nodes', knownodeAPI.knownodes);
@@ -40,7 +42,7 @@ app.post('/knownodeAPI/post', knownodeAPI.addKnownode);
 app.put('/knownodeAPI/post/:id', knownodeAPI.editKnownode);
 app.delete('/knownodeAPI/post/:id', knownodeAPI.deleteKnownode);
 
-app.post('/userAPI/addUser', userAPI.addUser);
+//app.post('/userAPI/addUser', userAPI.addUser);
 
 
 http.createServer(app).listen(app.get('port'), function(){

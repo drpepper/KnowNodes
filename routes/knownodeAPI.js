@@ -2,7 +2,8 @@
  * Serve JSON to the AngularJS client by sending a request
  */
 // GET
-var DB = require('../DB/knownodeDB');
+var ExpRes = require('express-resource'),
+    DB = require('../DB/knownodeDB');
 
 exports.knownodes = function (req, res) {
     var nodes = [];

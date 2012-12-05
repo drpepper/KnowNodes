@@ -1,6 +1,6 @@
 /**
  * Created with JetBrains WebStorm.
- * User: admin
+ * User: Liad Magen
  * Date: 26/11/12
  * Time: 14:07
  * To change this template use File | Settings | File Templates.
@@ -40,10 +40,10 @@ var kn_User  = exports.User = schema.define('kn_User', {
     __CreatedOn__:  { type: Date,    default: Date.now },
 
     email:          { type: String, length: 255 },
-    userFirstName:  { type: String, length: 255 },
-    userLastName:   { type: String, length: 255 },
-    Gender:         { type: String, length: 1 },
-    DOB:            { type: Date }
+    firstName:  { type: String, length: 255 },
+    lastName:   { type: String, length: 255 },
+    gender:         { type: String, length: 1 },
+    dataOfBirth:            { type: Date }
 });
 
 var kn_Tag = exports.Tag = schema.define('kn_Tag', {

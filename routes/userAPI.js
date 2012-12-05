@@ -4,12 +4,12 @@
 // GET
 var DB = require('../DB/knownodeDB');
 
-exports.users = function (req, res) {
+exports.index = function (req, res) {
     var userList = [];
-    var data = new DB.User;
+    var user = new DB.User;
 
-    DB.User.all(function(err){
-        data.forEach(function (user, i) {
+    DB.User.all(function(err, users){
+         users.forEach(function (user, i) {
             userList.push({
                 id: i,
                 userId: user.__ID__,
@@ -23,10 +23,11 @@ exports.users = function (req, res) {
         res.json({
             nodes: userList
         });
+
     });
 };
 
-exports.knownode = function (req, res) {
+exports.show = function (req, res) {
     var id, edge;
     id = req.params.id;
 
@@ -43,37 +44,7 @@ exports.knownode = function (req, res) {
 };
 
 // POST
-exports.addUser = function (req, res) {
-    var user = new DB.User;
-
-    user.save(req.body);
-
-    //data.posts.push(req.body);
+exports.create = function (req, res) {
+    DB.User.create(req.body);
     res.json(req.body);
-};
-
-// PUT
-exports.editKnownode = function (req, res) {
-    var id = req.params.id;
-    var data = DB.schema.models.kn_Edge.all({where: {__ID__: id}});
-
-    if (id >= 0 && id < data.kn_Edge.length) {
-        data.kn_Edge[id] = req.body;
-        res.json(true);
-    } else {
-        res.json(false);
-    }
-};
-
-// DELETE
-exports.deleteKnownode = function (req, res) {
-    var id = req.params.id;
-    var data = DB.schema.models.kn_Edge.all({where: {__ID__: id}});
-
-    if (id >= 0 && id < data.posts.length) {
-        data.posts.splice(id, 1);
-        res.json(true);
-    } else {
-        res.json(false);
-    }
 };

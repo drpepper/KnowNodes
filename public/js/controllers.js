@@ -22,7 +22,7 @@ MyCtrl2.$inject = [];
 function AddUserCtrl($scope, $http, $location) {
     $scope.form = {};
     $scope.submitUser = function () {
-        $http.post('/userAPI/addUser', $scope.form).
+        $http.post('/API/users', $scope.form).
             success(function(data){
                 $location.path('/');
             })
@@ -30,9 +30,9 @@ function AddUserCtrl($scope, $http, $location) {
 }
 
 function IndexCtrl($scope, $http) {
-  $http.get('/api/posts').
+  $http.get('/api/users').
     success(function(data, status, headers, config) {
-      $scope.posts = data.posts;
+      $scope.users = data.users;
     });
 }
  
