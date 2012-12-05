@@ -67,10 +67,10 @@
                     "knowledgeDomainId": 1,
                     "knowledgeDomainTitle": "Philosophy"
                 },
-                    {
-                        "knowledgeDomainId": 2,
-                        "knowledgeDomainTitle": "Chemistry"
-                    }]
+                {
+                    "knowledgeDomainId": 2,
+                    "knowledgeDomainTitle": "Chemistry"
+                }]
             },
             "edge": {
               "connectionType" : {
