@@ -12,7 +12,7 @@
  */
 
 // Declare app level module which depends on filters, and services
-angular.module('KnowNodesApp', ['KnowNodesApp.filters', 'KnowNodesApp.services', 'KnowNodesApp.directives']).
+var KnowNodesAppModule = angular.module('KnowNodesApp', ['ui.directives', 'KnowNodesApp.filters', 'KnowNodesApp.services', 'KnowNodesApp.directives']).
     config(['$routeProvider', '$locationProvider', function($routeProvider, $locationProvider) {
     $routeProvider.
         when('/', {
@@ -44,3 +44,9 @@ angular.module('KnowNodesApp', ['KnowNodesApp.filters', 'KnowNodesApp.services',
         });
     $locationProvider.html5Mode(true);
 }]);
+
+KnowNodesAppModule.value('ui.config', {
+    select2: {
+        allowClear: true
+    }
+});
