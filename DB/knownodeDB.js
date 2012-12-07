@@ -5,10 +5,11 @@
  * Time: 14:07
  * To change this template use File | Settings | File Templates.
  */
-var Schema = require('jugglingdb').Schema;
-//ToDo: change the url/port number to configuration
+var Schema = require('jugglingdb').Schema,
+    DBData = require('../config/DB.conf');
+
 //var schema = new Schema('neo4j', {url: 'http://localhost', port: 7474});
-var schema = new Schema('neo4j', {url: 'http://43633a2e0:38da8dd0f@f852f78b3.hosted.neo4j.org:7486',port: 7486});
+var schema = new Schema('neo4j', DBData.getDBURL());
 
 var kn_UserGroup = exports.UserGroup = schema.define('UserGroup', {
     __ID__ :        { type: Number },
@@ -84,7 +85,7 @@ var kn_Source = exports.Source = schema.define('kn_Source', {
 var kn_Edge = exports.Edge = schema.define('kn_Edge', {
     __ID__ :        { type: Number },
     __Type__:       { type: String, length: 20, default: 'Edge'},
-    __CreatedOn__:  { type: Date,    default: Date.now },
+    __CreatedOn__:  { type: Date, default: Date.now },
 
     title:          { type: String, length: 255 },
     url:            { type: String, length: 2000 },

@@ -6,8 +6,6 @@ var express = require('express')
   , routes = require('./routes')
   , Resource = require('express-resource')
   , http = require('http')
-  , knownodeAPI = require('./routes/knownodeAPI')
-  , userAPI = require('./routes/userAPI')
   , path = require('path');
 
 var app = express();
@@ -34,13 +32,6 @@ app.resource('API/knownodes', require('./routes/knownodeAPI.js'));
 
 app.get('/', routes.index);
 app.get('/partials/:name', routes.partials);
-
-app.get('/knownodeAPI/nodes', knownodeAPI.knownodes);
-
-app.get('/knownodeAPI/post/:id', knownodeAPI.knownode);
-app.post('/knownodeAPI/post', knownodeAPI.addKnownode);
-app.put('/knownodeAPI/post/:id', knownodeAPI.editKnownode);
-app.delete('/knownodeAPI/post/:id', knownodeAPI.deleteKnownode);
 
 //app.post('/userAPI/addUser', userAPI.addUser);
 

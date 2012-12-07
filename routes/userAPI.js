@@ -5,8 +5,8 @@
 var DB = require('../DB/knownodeDB');
 
 exports.index = function (req, res) {
-    var userList = [];
-    var user = new DB.User;
+    var userList = [],
+        user = new DB.User;
 
     DB.User.all(function(err, users){
          users.forEach(function (user, i) {
