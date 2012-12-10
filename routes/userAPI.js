@@ -21,7 +21,7 @@ exports.index = function (req, res) {
         });
 
         res.json({
-            nodes: userList
+            users: userList
         });
 
     });
