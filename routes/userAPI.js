@@ -8,10 +8,10 @@ exports.index = function (req, res) {
     var userList = [],
         user = new DB.User;
 
-    DB.User.all(function(err, users){
-         users.forEach(function (user, i) {
+    var test = DB.User.all({limit: 10}, function(err, result){
+        result.forEach(function (u, i) {
             userList.push({
-                id: i,
+                id:i,
                 userId: user.__ID__,
                 email: user.email,
                 firstName: user.userFirstName,

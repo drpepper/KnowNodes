@@ -107,7 +107,7 @@ kn_Source.hasMany(kn_Tag,   {as: 'tags',  foreignKey: 'tagId'});
 kn_Source.hasMany(kn_KnowledgeDomain,   {as: 'knowledgeDomains',  foreignKey: 'knowledgeDomainId'});
 kn_User.hasMany(kn_UserGroup,   {as: 'userGroups',  foreignKey: 'userGroupId'});
 
-kn_User.validatesPresenceOf('email', 'firstname', 'lastname');
+kn_User.validatesPresenceOf('email', 'firstName', 'lastName');
 kn_User.validatesUniquenessOf('email', {message: 'email is not unique'});
 
 kn_Source.belongsTo(kn_User, {as: '__CreatedBy__', foreignKey: '__ID__'});
