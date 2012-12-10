@@ -20,7 +20,7 @@ var KnowNodesAppModule = angular.module('KnowNodesApp', ['ui.directives', 'KnowN
             controller: IndexCtrl
         }).
         when('/addUser', {
-            templateUrl: 'partials/addUser',
+            templateUrl: 'partials/User/addUser',
             controller: AddUserCtrl
         }).
         when('/addPost', {

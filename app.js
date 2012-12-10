@@ -36,6 +36,7 @@ app.resource('API/users', require('./routes/userAPI.js'));
 app.resource('API/knownodes', require('./routes/knownodeAPI.js'));
 
 app.get('/', routes.index);
+app.get('/partials/:dir/:name', routes.partialsDir);
 app.get('/partials/:name', routes.partials);
 
 app.get('*', routes.index);

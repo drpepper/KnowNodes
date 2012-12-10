@@ -9,15 +9,16 @@ exports.index = function (req, res) {
         user = new DB.User;
 
     var test = DB.User.all({limit: 10}, function(err, result){
-        result.forEach(function (u, i) {
-            userList.push({
-                id:i,
-                userId: user.__ID__,
-                email: user.email,
-                firstName: user.userFirstName,
-                lastName: user.userLastName,
-                DOB: user.DOB
-            });
+        result.forEach(function (currentUser, currentUserIndex) {
+            /*userList.push({
+                id:currentUser.id,
+                userId: currentUser.__ID__,
+                email: currentUser.email,
+                firstName: currentUser.firstName,
+                lastName: currentUser.lastName,
+                DOB: currentUser.DOB
+            });*/
+            userList.push(currentUser);
         });
 
         res.json({
@@ -45,6 +46,13 @@ exports.show = function (req, res) {
 
 // POST
 exports.create = function (req, res) {
-    DB.User.create(req.body);
-    res.json(req.body);
+    DB.User.create(req.body, function(err, obj){
+        if(err) {
+            res.json(err);
+        }
+        else{
+            res.json(obj);
+        }
+    });
+    //res.json(req.body);
 };
