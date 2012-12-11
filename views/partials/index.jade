@@ -1,6 +1,6 @@
 p There are {{users.length}} users
 div(ng-repeat='user in users')
-  h3 {{user.firstName}} {{user.lastName}}
+  h4 {{user.firstName}} {{user.lastName}}
   div {{user.email}}
   a(href='readPost/{{user.id}}') More
   |  - 

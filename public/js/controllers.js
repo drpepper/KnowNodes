@@ -19,13 +19,36 @@ MyCtrl1.$inject = [];
 function MyCtrl2() {}
 MyCtrl2.$inject = [];
 
+
+// Users:
 function AddUserCtrl($scope, $http, $location) {
     $scope.form = {};
     $scope.submitUser = function () {
         $http.post('/API/users', $scope.form).
             success(function(data){
                 $location.path('/');
-            })
+            });
+    }
+}
+
+//knownode Source:
+function AddSourceCtrl($scope, $http, $location) {
+    $scope.form = {};
+    $scope.submitSource = function () {
+        $http.post('/API/knownodes', $scope.form).
+            success(function(data) {
+                $location.path('/AddEdge');
+            });
+    }
+}
+
+function AddEdgeCtrl($scope, $http, $location){
+    $scope.form = {};
+    $scope.submitSource = function () {
+        $http.post('/API/knownodes/edge', $scope.form).
+            success(function(data) {
+                $location.path('/AddSource');
+            });
     }
 }
 

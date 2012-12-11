@@ -5,12 +5,22 @@
 var ExpRes = require('express-resource'),
     DB = require('../DB/knownodeDB');
 
-exports.knownodes = function (req, res) {
-    var nodes = [];
-    var data = new DB.Source;
+var callBack = function(err, result){
+    if (0 < result.length) {
+        res.json({
+            "knownode": result
+        });
+    } else {
+        res.json(err);
+    }
+};
 
-    DB.Source.all(function(err){
-        data.forEach(function (node, i) {
+exports.index = function (req, res) {
+    var nodes = [];
+    var source = new DB.Source;
+
+    DB.Source.all({ limit: 10 }, function(err, result){
+        result.forEach(function (node, index) {
             nodes.push({
                 id: i,
                 nodeId: node.__ID__,
@@ -26,52 +36,30 @@ exports.knownodes = function (req, res) {
     });
 };
 
-exports.knownode = function (req, res) {
+exports.show = function (req, res) {
     var id, edge;
-    id = req.params.id;
+    id = req.params.knownode;
 
-    edge = new DB.Edge;
-    DB.Edge.all({where:{__ID__:id}}, function(err){
-        if (id >= 0 && 0 < edge.length) {
-            res.json({
-                "edge": edge[id]
-            });
-        } else {
-            res.json(err);
-        }
-    });
+    DB.Edge.all({where:{__ID__:id}}, callBack);
 };
 
 // POST
-exports.addKnownode = function (req, res) {
-    var edge = DB.schema.models.kn_Edge();
-
-    data.posts.push(req.body);
-    res.json(req.body);
+exports.create = function (req, res) {
+    DB.User.find(10, function(err, user){
+        var source = user.knownodeSources.build(req.body, callBack);
+        source.save(console.log);
+    })
+        //create(req.body, callBack);
 };
 
 // PUT
-exports.editKnownode = function (req, res) {
-    var id = req.params.id;
-    var data = DB.schema.models.kn_Edge.all({where: {__ID__: id}});
-
-    if (id >= 0 && id < data.kn_Edge.length) {
-        data.kn_Edge[id] = req.body;
-        res.json(true);
-    } else {
-        res.json(false);
-    }
+exports.update = function (req, res) {
+    var id = req.params.knownode;
+    DB.Source.all({where: {__ID__: id}}, callBack);
 };
 
 // DELETE
-exports.deleteKnownode = function (req, res) {
-    var id = req.params.id;
-    var data = DB.schema.models.kn_Edge.all({where: {__ID__: id}});
-
-    if (id >= 0 && id < data.posts.length) {
-        data.posts.splice(id, 1);
-        res.json(true);
-    } else {
-        res.json(false);
-    }
+exports.destroy = function (req, res) {
+    var id = req.params.knownode;
+    DB.Source.all({where: {__ID__: id}}, callBack);
 };

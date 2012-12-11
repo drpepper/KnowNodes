@@ -32,8 +32,8 @@ app.configure('production', function(){
 });
 
 
-app.resource('API/users', require('./routes/userAPI.js'));
-app.resource('API/knownodes', require('./routes/knownodeAPI.js'));
+app.resource('API/users', require('./routes/userAPI'));
+app.resource('API/knownodes', require('./routes/knownodeAPI'));
 
 app.get('/', routes.index);
 app.get('/partials/:dir/:name', routes.partialsDir);
