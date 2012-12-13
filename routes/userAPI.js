@@ -4,14 +4,16 @@
 // GET
 var DB = require('../DB/knownodeDB');
 
-var callBack = function(err, result){
-    if (0 < result.length) {
-        res.json({
-            "user": result
-        });
-    } else {
-        res.json(err);
-    }
+var callBack = function(res) {
+    return function(err, result){
+        if (0 < result.length) {
+            res.json({
+                "user": result
+            });
+        } else {
+            res.json(err);
+        }
+    };
 };
 
 exports.index = function (req, res) {
@@ -41,23 +43,23 @@ exports.index = function (req, res) {
 exports.show = function (req, res) {
     var userEmail = req.params.email;
 
-    DB.User.all({where:{email: userEmail}}, callBack);
+    DB.User.all({where:{email: userEmail}}, callBack(res));
 };
 
 // POST
 exports.create = function (req, res) {
-    DB.User.create(req.body, callBack);
+    DB.User.create(req.body, callBack(res));
     //res.json(req.body);
 };
 
 exports.edit = function (req, res) {
     var userEmail = req.params.email;
 
-    DB.User.all({where:{email: userEmail}}, callBack);
+    DB.User.all({where:{email: userEmail}}, callBack(res));
 }
 
 exports.update = function (req, res) {
     var userEmail = req.params.email;
 
-    DB.User.all({where:{email: userEmail}}, callBack);
+    DB.User.all({where:{email: userEmail}}, callBack(res));
 }
