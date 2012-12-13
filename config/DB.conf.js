@@ -1,7 +1,7 @@
 exports.getDBURL = function(){
     var DBDetails = {
-        protocol: 'https',
-        url: 'http://f852f78b3.hosted.neo4j.org/',
+        protocol: 'http',
+        url: 'f852f78b3.hosted.neo4j.org',
         port: 7486,
         user: '43633a2e0',
         password: '38da8dd0f'

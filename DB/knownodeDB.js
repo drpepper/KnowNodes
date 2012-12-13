@@ -47,10 +47,10 @@ var kn_User  = exports.User = schema.define('kn_User', {
     __CreatedOn__:  { type: Date,    default: Date.now },
 
     email:          { type: String, length: 255 },
-    firstName:  { type: String, length: 255 },
-    lastName:   { type: String, length: 255 },
+    firstName:      { type: String, length: 255 },
+    lastName:       { type: String, length: 255 },
     gender:         { type: String, length: 1 },
-    dataOfBirth:            { type: Date }
+    dateOfBirth:    { type: Date }
 });
 
 var kn_Tag = exports.Tag = schema.define('kn_Tag', {
@@ -102,6 +102,7 @@ var kn_Comment = exports.Comment = schema.define('kn_Comment', {
     active:         { type: Boolean, default: true, index: true }
 });
 
+/*
 //setup relationships
 kn_Source.hasMany(kn_Tag,   {as: 'tags',  foreignKey: '__ID__'});
 kn_Source.hasMany(kn_KnowledgeDomain,   {as: 'knowledgeDomains',  foreignKey: '__ID__'});
@@ -114,7 +115,7 @@ kn_Edge.belongsTo(kn_User, {as: '__CreatedBy__', foreignKey: '__ID__'});
 kn_Comment.belongsTo(kn_User, {as: '__CreatedBy__', foreignKey: '__ID__'});
 kn_ConnectionType.belongsTo(kn_User, {as: '__CreatedBy__', foreignKey: '__ID__'});
 kn_ConnectionType.belongsTo(kn_Edge, {as: 'connectionType', foreignKey: '__ID__'});
-
+*/
 
 //validations
 kn_User.validatesPresenceOf('email', 'firstName', 'lastName');

@@ -21,6 +21,12 @@ exports.index = function (req, res) {
         user = new DB.User;
 
     var test = DB.User.all({limit: 10}, function(err, result){
+        if(err)
+        {
+            res.json(err);
+            return;
+        }
+
         result.forEach(function (currentUser, currentUserIndex) {
             /*userList.push({
                 id:currentUser.id,
