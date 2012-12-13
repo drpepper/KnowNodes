@@ -45,9 +45,26 @@ exports.show = function (req, res) {
 
 // POST
 exports.create = function (req, res) {
-    DB.User.find(10, function(err, user){
-        var source = user.knownodeSources.build(req.body, callBack);
-        source.save(console.log);
+    DB.User.findOne({ where: { '__ID__': '54bba643-e08b-4169-8190-bd0e198d789e'}}, function(err, user){
+        if(err)
+        {
+            res.json(err);
+            return;
+        }
+        DB.Source.create(req.body, function(err, source){
+            if(err)
+            {
+                res.json(err);
+                return;
+            }
+            DB.Source.createRelationshipTo(user.id, source.id, 'createdBy', { connectionType: 'ExplainOf' }, function(err, something){
+                if(err) {
+                    res.json(err);
+                    return;
+                }
+                res.json(source);
+            });
+        });
     })
         //create(req.body, callBack);
 };

@@ -20,7 +20,6 @@ function GUID ()
     });
 }
 
-
 var kn_UserGroup = exports.UserGroup = schema.define('UserGroup', {
     __ID__ :        { type: String, length: 36, default: GUID },
     __CreatedOn__:  { type: Date,    default: Date.now },
