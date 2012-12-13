@@ -1,20 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="91669812-c64b-4f2f-8b4f-339870dae511" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/profiles_settings.xml" afterPath="" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/views/partials/addUser.jade" afterPath="$PROJECT_DIR$/views/partials/User/addUser.jade" />
+    <list default="true" id="91669812-c64b-4f2f-8b4f-339870dae511" name="Default" comment="" />
+    <list id="6670e662-0f3d-4bd9-97a5-1eeb725c166f" name="Rejected commit: Default" comment="DB - Users module&#10;css bootstrap added">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app.js" afterPath="$PROJECT_DIR$/app.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/config/DB.conf.js" afterPath="$PROJECT_DIR$/config/DB.conf.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/js/app.js" afterPath="$PROJECT_DIR$/public/js/app.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/routes/index.js" afterPath="$PROJECT_DIR$/routes/index.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/routes/userAPI.js" afterPath="$PROJECT_DIR$/routes/userAPI.js" />
     </list>
-    <list id="6670e662-0f3d-4bd9-97a5-1eeb725c166f" name="Rejected commit: Default" comment="DB - Users module&#10;css bootstrap added" />
     <ignored path="KnowNodes.iws" />
     <ignored path=".idea/workspace.xml" />
+    <file path="$PROJECT_DIR$/.idea/workspace.xml" changelist="91669812-c64b-4f2f-8b4f-339870dae511" time="1355395399367" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -34,43 +28,43 @@
       <file leaf-file-name="userAPI.js" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/routes/userAPI.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="20" column="0" selection-start="635" selection-end="635" vertical-scroll-proportion="0.0">
+            <state line="63" column="57" selection-start="1529" selection-end="1529" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="index.jade" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/views/partials/index.jade">
+      <file leaf-file-name="knownodeDB.js" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/DB/knownodeDB.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+            <state line="10" column="0" selection-start="249" selection-end="249" vertical-scroll-proportion="0.25862068">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="editPost.jade" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/views/partials/editPost.jade">
+      <file leaf-file-name="abstract-class.js" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/node_modules/jugglingdb/lib/abstract-class.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="6" column="4" selection-start="150" selection-end="150" vertical-scroll-proportion="0.0">
+            <state line="440" column="47" selection-start="12288" selection-end="12296" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="index.jade" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/views/index.jade">
+      <file leaf-file-name="DB.conf.js" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/config/DB.conf.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="9" column="22" selection-start="150" selection-end="150" vertical-scroll-proportion="0.0">
+            <state line="2" column="24" selection-start="77" selection-end="77" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="app.js" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/public/js/app.js">
+      <file leaf-file-name="neo4j.js" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/node_modules/jugglingdb/lib/adapters/neo4j.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="22" column="40" selection-start="1049" selection-end="1049" vertical-scroll-proportion="0.5699482">
+            <state line="200" column="41" selection-start="6296" selection-end="6296" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -92,8 +86,6 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/DB/knownodeDB._coffee" />
-        <option value="$PROJECT_DIR$/package.json" />
         <option value="$PROJECT_DIR$/routes/knownodeAPI.js" />
         <option value="$PROJECT_DIR$/public/js/controllers.js" />
         <option value="$PROJECT_DIR$/views/partials/addUser.html" />
@@ -102,12 +94,14 @@
         <option value="$PROJECT_DIR$/views/index.jade" />
         <option value="$PROJECT_DIR$/views/layout.jade" />
         <option value="$PROJECT_DIR$/views/partials/index.jade" />
-        <option value="$PROJECT_DIR$/DB/knownodeDB.js" />
-        <option value="$PROJECT_DIR$/config/DB.conf.js" />
-        <option value="$PROJECT_DIR$/routes/userAPI.js" />
         <option value="$PROJECT_DIR$/public/js/app.js" />
         <option value="$PROJECT_DIR$/app.js" />
         <option value="$PROJECT_DIR$/routes/index.js" />
+        <option value="$PROJECT_DIR$/routes/userAPI.js" />
+        <option value="$PROJECT_DIR$/config/DB.conf.js" />
+        <option value="$PROJECT_DIR$/node_modules/jugglingdb/lib/abstract-class.js" />
+        <option value="$PROJECT_DIR$/node_modules/jugglingdb/lib/railway.js" />
+        <option value="$PROJECT_DIR$/DB/knownodeDB.js" />
       </list>
     </option>
   </component>
@@ -167,7 +161,6 @@
       <sortByType />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -196,7 +189,25 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="views" />
+              <option name="myItemId" value="node_modules" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="KnowNodes" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="KnowNodes" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="node_modules" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="jugglingdb" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -230,12 +241,13 @@
           </PATH>
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="options.splitter.main.proportions" value="0.3" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="options.lastSelected" value="preferences.sourceCode" />
+    <property name="options.lastSelected" value="preferences.pluginManager" />
     <property name="recentsLimit" value="5" />
     <property name="restartRequiresConfirmation" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/../KN" />
@@ -350,7 +362,15 @@
       <created>1355155072716</created>
       <updated>1355155072716</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="bug fix for user validation (mandatory fields)">
+      <created>1355395191745</created>
+      <updated>1355395191745</updated>
+    </task>
+    <task id="LOCAL-00010" summary="again added GUID as Ids">
+      <created>1355395379089</created>
+      <updated>1355395379089</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <option name="createChangelist" value="false" />
     <servers />
   </component>
@@ -382,11 +402,11 @@
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32890365" sideWeight="0.49547374" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32890365" sideWeight="0.49547374" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.23717561" sideWeight="0.4451827" order="1" side_tool="true" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.23717561" sideWeight="0.6710963" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.23717561" sideWeight="0.6722038" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.39977852" sideWeight="0.45986724" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.23717561" sideWeight="0.33444077" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32890365" sideWeight="0.50754374" order="9" side_tool="true" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32890365" sideWeight="0.48823175" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32779622" sideWeight="0.43150273" order="9" side_tool="true" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32779622" sideWeight="0.56427276" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -432,7 +452,7 @@
     <option name="SHOW_VCS_ERROR_NOTIFICATIONS" value="true" />
     <option name="FORCE_NON_EMPTY_COMMENT" value="false" />
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="false" />
-    <option name="LAST_COMMIT_MESSAGE" value="bug fix for user validation (mandatory fields)" />
+    <option name="LAST_COMMIT_MESSAGE" value="again added GUID as Ids" />
     <option name="MAKE_NEW_CHANGELIST_ACTIVE" value="false" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="CHECK_FILES_UP_TO_DATE_BEFORE_COMMIT" value="false" />
@@ -452,58 +472,22 @@
     <MESSAGE value="DB configuration is in external file" />
     <MESSAGE value="direct pass-through from url to angularJS" />
     <MESSAGE value="bug fix for user validation (mandatory fields)" />
+    <MESSAGE value="again added GUID as Ids" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="javascript">
-          <url>file://$PROJECT_DIR$/node_modules/jugglingdb/lib/adapters/neo4j.js</url>
-          <line>210</line>
-          <option name="timeStamp" value="39" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="javascript">
-          <url>file://$PROJECT_DIR$/node_modules/jugglingdb/lib/adapters/neo4j.js</url>
-          <line>205</line>
-          <option name="timeStamp" value="40" />
-        </line-breakpoint>
-      </breakpoints>
       <option name="time" value="50" />
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/node_modules/neo4j/lib/GraphDatabase.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="64" column="0" selection-start="3073" selection-end="3073" vertical-scroll-proportion="0.33266932">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/node_modules/jugglingdb/lib/hookable.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="45" column="0" selection-start="1318" selection-end="1318" vertical-scroll-proportion="0.65048546">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/node_modules/jugglingdb/lib/validatable.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="263" column="0" selection-start="5971" selection-end="5971" vertical-scroll-proportion="0.33203885">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://$APPLICATION_HOME_DIR$/plugins/JavaScriptLanguage/lib/JavascriptLanguage.jar!/com/intellij/lang/javascript/index/predefined/EcmaScript5.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="44" column="7" selection-start="774" selection-end="774" vertical-scroll-proportion="0.33203885">
-          <folding />
-        </state>
+        <state line="44" column="7" selection-start="774" selection-end="774" vertical-scroll-proportion="0.33203885" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/node_modules/neo4j/node_modules/streamline/lib/callbacks/runtime.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="90" column="0" selection-start="1894" selection-end="1894" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
+        <state line="90" column="0" selection-start="1894" selection-end="1894" vertical-scroll-proportion="0.0" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/node_modules/neo4j/lib/Node.js">
@@ -513,31 +497,24 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/node_modules/jugglingdb/lib/abstract-class.js">
+    <entry file="file://$PROJECT_DIR$/routes/index.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="158" column="0" selection-start="4499" selection-end="4499" vertical-scroll-proportion="0.0">
+        <state line="18" column="1" selection-start="379" selection-end="379" vertical-scroll-proportion="0.46632123" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="33" column="0" selection-start="752" selection-end="752" vertical-scroll-proportion="0.5344828">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/config/DB.conf.js">
+    <entry file="file://$PROJECT_DIR$/routes/api.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="3" column="15" selection-start="94" selection-end="94" vertical-scroll-proportion="0.08737864">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/node_modules/jugglingdb/lib/adapters/neo4j.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="185" column="0" selection-start="6016" selection-end="6016" vertical-scroll-proportion="0.9161554">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/routes/userAPI.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="20" column="0" selection-start="635" selection-end="635" vertical-scroll-proportion="0.0">
-          <folding />
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+          <folding>
+            <element signature="n#!!doc" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -548,37 +525,65 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/views/partials/editPost.jade">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="6" column="4" selection-start="150" selection-end="150" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/views/index.jade">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="9" column="22" selection-start="150" selection-end="150" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/routes/index.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="18" column="1" selection-start="379" selection-end="379" vertical-scroll-proportion="0.46632123">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="38" column="50" selection-start="947" selection-end="958" vertical-scroll-proportion="0.6632124">
+        <state line="9" column="22" selection-start="150" selection-end="150" vertical-scroll-proportion="0.23275863">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/public/js/app.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="22" column="40" selection-start="1049" selection-end="1049" vertical-scroll-proportion="0.5699482">
+        <state line="22" column="40" selection-start="1049" selection-end="1049" vertical-scroll-proportion="0.45689654">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/views/partials/editPost.jade">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="6" column="4" selection-start="150" selection-end="150" vertical-scroll-proportion="0.15517241">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/node_modules/jugglingdb/lib/railway.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="196" column="11" selection-start="6350" selection-end="6350" vertical-scroll-proportion="0.3915344">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/node_modules/jugglingdb/lib/adapters/neo4j.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="200" column="41" selection-start="6296" selection-end="6296" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/node_modules/jugglingdb/lib/abstract-class.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="440" column="47" selection-start="12288" selection-end="12296" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/config/DB.conf.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="2" column="24" selection-start="77" selection-end="77" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/routes/userAPI.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="63" column="57" selection-start="1529" selection-end="1529" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/DB/knownodeDB.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="10" column="0" selection-start="249" selection-end="249" vertical-scroll-proportion="0.25862068">
           <folding />
         </state>
       </provider>
