@@ -8,6 +8,7 @@
 var Schema = require('jugglingdb').Schema,
     DBData = require('../config/DB.conf');
 
+
 //var schema = new Schema('neo4j', {url: 'http://localhost', port: 7474});
 var schema = new Schema('neo4j', DBData.getDBURL());
 
