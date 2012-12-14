@@ -31,7 +31,7 @@ exports.show = (req, res) ->
     email: userEmail
   , callBackRes)
 
-  
+
 # POST (create new)
 exports.create = (req, res) ->
   callBackRes = callBack(res)

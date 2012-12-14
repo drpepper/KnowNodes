@@ -17,9 +17,10 @@ var callBack = function(err, result){
 
 exports.index = function (req, res) {
     var nodes = [];
-    var source = new DB.Source;
+    var post = new DB.Post;
+    var post = new DB.Post;
 
-    DB.Source.all({ limit: 10 }, function(err, result){
+    DB.Post.all({ limit: 10 }, function(err, result){
         result.forEach(function (node, index) {
             nodes.push({
                 id: i,
@@ -51,18 +52,18 @@ exports.create = function (req, res) {
             res.json(err);
             return;
         }
-        DB.Source.create(req.body, function(err, source){
+        DB.Post.create(req.body, function(err, post){
             if(err)
             {
                 res.json(err);
                 return;
             }
-            DB.Source.createRelationshipTo(user.id, source.id, 'createdBy', { connectionType: 'ExplainOf' }, function(err, something){
+            DB.Post.createRelationshipTo(user.id, post.id, 'createdBy', { connectionType: 'ExplainOf' }, function(err, something){
                 if(err) {
                     res.json(err);
                     return;
                 }
-                res.json(source);
+                res.json(post);
             });
         });
     })
@@ -72,11 +73,11 @@ exports.create = function (req, res) {
 // PUT
 exports.update = function (req, res) {
     var id = req.params.knownode;
-    DB.Source.all({where: {__ID__: id}}, callBack);
+    DB.Post.all({where: {__ID__: id}}, callBack);
 };
 
 // DELETE
 exports.destroy = function (req, res) {
     var id = req.params.knownode;
-    DB.Source.all({where: {__ID__: id}}, callBack);
+    DB.Post.all({where: {__ID__: id}}, callBack);
 };

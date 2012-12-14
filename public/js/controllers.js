@@ -31,10 +31,10 @@ function AddUserCtrl($scope, $http, $location) {
     }
 }
 
-//knownode Source:
-function AddSourceCtrl($scope, $http, $location) {
+//knownode Post:
+function AddPostCtrl($scope, $http, $location) {
     $scope.form = {};
-    $scope.submitSource = function () {
+    $scope.submitPost = function () {
         $http.post('/API/knownodes', $scope.form).
             success(function(data) {
                 $location.path('/AddEdge');
@@ -44,10 +44,10 @@ function AddSourceCtrl($scope, $http, $location) {
 
 function AddEdgeCtrl($scope, $http, $location){
     $scope.form = {};
-    $scope.submitSource = function () {
+    $scope.submitPost = function () {
         $http.post('/API/knownodes/edge', $scope.form).
             success(function(data) {
-                $location.path('/AddSource');
+                $location.path('/AddPost');
             });
     }
 }
@@ -57,54 +57,4 @@ function IndexCtrl($scope, $http) {
     success(function(data, status, headers, config) {
       $scope.users = data.users;
     });
-}
- 
-function AddPostCtrl($scope, $http, $location) {
-  $scope.form = {};
-  $scope.submitPost = function () {
-    $http.post('/api/post', $scope.form).
-      success(function(data) {
-        $location.path('/');
-      });
-  };
-}
- 
-function ReadPostCtrl($scope, $http, $routeParams) {
-  $http.get('/api/post/' + $routeParams.id).
-    success(function(data) {
-      $scope.post = data.post;
-    });
-}
- 
-function EditPostCtrl($scope, $http, $location, $routeParams) {
-  $scope.form = {};
-  $http.get('/api/post/' + $routeParams.id).
-    success(function(data) {
-      $scope.form = data.post;
-    });
-    
-  $scope.editPost = function () {
-    $http.put('/api/post/' + $routeParams.id, $scope.form).
-      success(function(data) {
-        $location.url('/readPost/' + $routeParams.id);
-      });
-  };
-}
- 
-function DeletePostCtrl($scope, $http, $location, $routeParams) {
-  $http.get('/api/post/' + $routeParams.id).
-    success(function(data) {
-      $scope.post = data.post;
-    });
-    
-  $scope.deletePost = function () {
-    $http.delete('/api/post/' + $routeParams.id).
-      success(function(data) {
-        $location.url('/');
-      });
-  };
-  
-  $scope.home = function () {
-    $location.url('/');
-  };
 }

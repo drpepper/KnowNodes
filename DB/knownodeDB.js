@@ -73,7 +73,7 @@ var kn_ConnectionType = exports.ConnectionType = schema.define('ConnectionType',
     title:          { type: String, length: 255 }
 });
 
-var kn_Source = exports.Source = schema.define('kn_Source', {
+var kn_Post = exports.Post = schema.define('kn_Post', {
     __ID__ :        { type: String, length: 36, default: GUID },
     __CreatedOn__:  { type: Date,    default: Date.now },
 
@@ -120,4 +120,4 @@ kn_ConnectionType.belongsTo(kn_Edge, {as: 'connectionType', foreignKey: '__ID__'
 kn_User.validatesPresenceOf('email', 'firstName', 'lastName');
 kn_User.validatesUniquenessOf('email', {message: 'email is not unique'});
 
-kn_Source.validatesPresenceOf('title', 'bodyText');
+kn_Post.validatesPresenceOf('title', 'bodyText');

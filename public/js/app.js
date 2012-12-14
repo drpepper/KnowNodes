@@ -23,32 +23,13 @@ var KnowNodesAppModule = angular.module('KnowNodesApp', ['ui.directives', 'KnowN
             templateUrl: 'partials/User/addUser',
             controller: AddUserCtrl
         }).
-        when('/addSourceURL', {
-            templateUrl: 'partials/KnownodeSource/addSourceURL',
-            controller: AddSourceCtrl
-        }).
-        when('/AddEdge', {
-            templateUrl: 'partials/KnownodeSource/addEdge',
-            controller: AddEdgeCtrl
-        }).
-
-
-
-        when('/addPost', {
-            templateUrl: 'partials/addPost',
+        when('/addPostURL', {
+            templateUrl: 'partials/KnownodePost/addPostURL',
             controller: AddPostCtrl
         }).
-        when('/readPost/:id', {
-            templateUrl: 'partials/readPost',
-            controller: ReadPostCtrl
-        }).
-        when('/editPost/:id', {
-            templateUrl: 'partials/editPost',
-            controller: EditPostCtrl
-        }).
-        when('/deletePost/:id', {
-            templateUrl: 'partials/deletePost',
-            controller: DeletePostCtrl
+        when('/AddEdge', {
+            templateUrl: 'partials/KnownodePost/addEdge',
+            controller: AddEdgeCtrl
         }).
         otherwise({
             redirectTo: '/'
