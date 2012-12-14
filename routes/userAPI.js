@@ -1,71 +1,82 @@
-/*
- * Serve JSON to the AngularJS client by sending a request
- */
-// GET
-var DB = require('../DB/knownodeDB');
+(function() {
+    var DB, callBack;
 
-var callBack = function(res) {
-    return function(err, result){
-        if (0 < result.length) {
-            res.json({
-                "user": result
-            });
-        } else {
-            res.json(err);
-        }
+    DB = require('../DB/knownodeDB');
+
+    callBack = function(res) {
+        var callbackFunc;
+        return callbackFunc = function(err, result) {
+            if (err) {
+                return res.json({
+                    user: err
+                });
+            } else {
+                return res.json({
+                    user: result
+                });
+            }
+        };
     };
-};
 
-exports.index = function (req, res) {
-    var userList = [],
+    exports.index = function(req, res) {
+        var user, userList;
+        userList = [];
         user = new DB.User;
-
-    var test = DB.User.all({limit: 10}, function(err, result){
-        if(err)
-        {
-            res.json(err);
-            return;
-        }
-
-        result.forEach(function (currentUser, currentUserIndex) {
-            /*userList.push({
-                id:currentUser.id,
-                userId: currentUser.__ID__,
-                email: currentUser.email,
-                firstName: currentUser.firstName,
-                lastName: currentUser.lastName,
-                DOB: currentUser.DOB
-            });*/
-            userList.push(currentUser);
+        return DB.User.all({
+            limit: 10
+        }, function(err, result) {
+            var currentUser, currentUserObj;
+            if (err) {
+                return res.json(err);
+            } else {
+                for (currentUser in result) {
+                    currentUserObj = result[currentUser];
+                    userList.push(currentUserObj);
+                }
+                return res.json({
+                    users: userList
+                });
+            }
         });
+    };
 
-        res.json({
-            users: userList
-        });
+    exports.show = function(req, res) {
+        var callBackRes, userEmail;
+        userEmail = req.params.email;
+        callBackRes = callBack(res);
+        return DB.User.all({
+            where: {
+                email: userEmail
+            }
+        }, callBackRes);
+    };
 
-    });
-};
+    exports.create = function(req, res) {
+        var callBackRes;
+        callBackRes = callBack(res);
+        return DB.User.create(req.body, callBackRes);
+    };
 
-exports.show = function (req, res) {
-    var userEmail = req.params.email;
+    exports.edit = function(req, res) {
+        var callBackRes, userEmail;
+        userEmail = req.params.email;
+        callBackRes = callBack(res);
+        return DB.User.all({
+            where: {
+                email: userEmail
+            }
+        }, callBackRes);
+    };
 
-    DB.User.all({where:{email: userEmail}}, callBack(res));
-};
+    exports.update = function(req, res) {
+        var callBackRes, userEmail;
+        userEmail = req.params.email;
+        callBackRes = callBack(res);
+        return DB.User.all({
+            where: {
+                email: userEmail
+            }
+        }, callBackRes);
+    };
 
-// POST
-exports.create = function (req, res) {
-    DB.User.create(req.body, callBack(res));
-    //res.json(req.body);
-};
-
-exports.edit = function (req, res) {
-    var userEmail = req.params.email;
-
-    DB.User.all({where:{email: userEmail}}, callBack(res));
-}
-
-exports.update = function (req, res) {
-    var userEmail = req.params.email;
-
-    DB.User.all({where:{email: userEmail}}, callBack(res));
-}
+}).call(this);
