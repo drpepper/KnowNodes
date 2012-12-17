@@ -1,0 +1,38 @@
+__id__	__CreatedOn__	node_type	postType	active	voteTotal	commentTotal	parallelEdgeTotal	title	bodyText	url	firstName	lastName	email	dateOfBirth	gender	
+67ed99b7-44b3-4be7-9e93-ba2125ef6e87	1355408606248	kn_User	0	true	0	0	0	0	0	0	dor	garbash	dor.garbash@gmail.com	2012-12-01T23:00:00.000Z	male
+67ed99b7-44b3-4be7-9e93-ba2125ef6e88	1255408606248	kn_User	0	true	0	0	0	0	0	0	liad	magen	liad.magen@gmail.com	2000-12-01T23:00:00.000Z	male
+67ed99b7-44b3-4be7-9e93-ba2125ef6e89	1345408606248	kn_User	0	true	0	0	0	0	0	0	Jesse	Himmelstein	jesse.himmelstein@gmail.com	1950-12-01T23:00:00.000Z	female
+67ed99b7-44b3-4be7-9e93-ba2125ef6e90	1351408606248	kn_UserGroup	0	true	0	0	0	Israelis	we were born in Israel, but living la vida loca in Paris
+67ed99b7-44b3-4be7-9e93-ba2125ef6e91	1855408606248	kn_Lab	true	0	0	0	0	Ariel's lab	synthetic biology stuff	
+67ed99b7-44b3-4be7-9e93-ba2125ef6e92	1455408606248	kn_KnowledgeDomain	0	true	0	0	0	biology			
+67ed99b7-44b3-4be7-9e93-ba2125ef6e92	1455408607248	kn_KnowledgeDomain	0	true	0	0	0	computer science			
+67ed99b7-44b3-4be7-9e93-ba2125ef6e93	1355608606248	kn_ConnectionType	0	true	0	0	0	is similar to			
+67ed99b7-44b3-4be7-9e93-ba2125ef6e94	1355908606248	kn_ConnectionType	0	true	0	0	0	is opposed to			
+67ed99b7-44b3-4be7-9e93-ba2125ef6e95	1355708606248	kn_ConnectionType	0	true	0	0	0	was in the past			
+67ed99b7-44b3-4be7-9e93-ba2125ef6e96	1355308606248	kn_ConnectionType	0	true	0	0	0	is the cause for			
+67ed99b7-44b3-4be7-9e93-ba2125ef6e97	1355808606248	kn_Connection	0	true	0	0	0	can be compared to	
+67ed99b7-44b3-4be7-9e93-ba2125ef6e98	1355208606248	kn_Connection	0	true	0	0	0	challenges the notion of	
+67ed99b7-44b3-4be7-9e93-ba2125ef6e99	1355908606248	kn_Connection	0	true	0	0	0	Facilitated the data gathering method used in	
+67ed99b7-44b3-4be7-9e93-ba2125ef6f87	1355608606248	kn_Connection	0	true	0	0	0	is probably the inspiration for	
+67ed99b7-44b3-4be7-9e93-ba2125ef6f88	1355408606248	kn_Connection	0	true	0	0	0	was concieved by	
+67ed99b7-44b3-4be7-9e93-ba2125ef6f89	1353408606248	kn_Connection	0	true	0	0	0	is not the same as	
+67ed99b7-44b3-4be7-9e93-ba2125ef6f90	1352408606248	kn_Connection	0	true	0	0	0	is an important question in the field of	
+67ed99b7-44b3-4be7-9e93-ba2125ef6f91	1351408606248	kn_Connection	0	true	0	0	0	suggest a novel method to deal with the question	
+67ed99b7-44b3-4be7-9e93-ba2125ef6f92	1335708606248	kn_Connection	0	true	0	0	0	used to contain	
+67ed99b7-44b3-4be7-9e93-ba2125ef6f93	1335708606248	kn_Connection	0	true	0	0	0	goes a lot beyond	
+67ed99b7-44b3-4be7-9e93-ba2125ef6f94	1335708606248	kn_Connection	0	true	0	0	0	is different than	
+67ed99b7-44b3-4be7-9e93-ba2125ef6f95	1435708606248	kn_Post	open question	0	true	0	0	0	What is the best method for network analysis?	
+67ed99b7-44b3-4be7-9e93-ba2125ef6f96	1535708606248	kn_Post	idea	true	0	0	0	0	let's create a mutated snake that kill everyone with a single byte to the chest! even your mom	
+67ed99b7-44b3-4be7-9e93-ba2125ef6f97	1635708606248	kn_Post	query	true	0	0	0	0	why are the sky blue?
+67ed99b7-44b3-4be7-9e93-ba2125ef6f98	1336708606248	kn_Post	publication	0	true	0	0	0	The Lucretian swerve: The biological basis of human behavior and the criminal justice system	http://www.pnas.org/content/early/2010/02/04/0915161107
+67ed99b7-44b3-4be7-9e93-ba2125ef6f99	1337708606248	kn_Post	publication	0	true	0	0	0	Predicting errors from reconfiguration patterns in human brain networks	http://www.pnas.org/content/109/41/16714.full.pdf+html
+67ed99b7-44b3-4be7-9e93-ba2125ef6f10	1338708606248	kn_Post	publication	0	true	0	0	0	Gamma-glutamyl transferase and C-reactive protein as alternative markers of metabolic abnormalities and their associated comorbidites: a prospective cohort study.	http://0-www.ncbi.nlm.nih.gov.elis.tmu.edu.tw/pubmed/23205179
+67ed99b7-44b3-4be7-9e93-ba2125ef6f11	1339708606248	kn_Post	concept	0	true	0	0	0	Biological evolution	http://en.wikipedia.org/wiki/Evolutionary_biology
+67ed99b7-44b3-4be7-9e93-ba2125ef6f12	1330708606248	kn_Post	concept	true	0	0	0	0	Linguistic Evolutionary_biology	http://en.wikipedia.org/wiki/Evolutionary_linguistics
+67ed99b7-44b3-4be7-9e93-ba2125ef6f13	1335108606248	kn_Post	concept	true	0	0	0	0	Free will	http://en.wikipedia.org/wiki/Free_will
+67ed99b7-44b3-4be7-9e93-ba2125ef6f14	1335208606248	kn_Post	Product	true	0	0	0	0	Coca-Cola	http://en.wikipedia.org/wiki/Coca-Cola
+67ed99b7-44b3-4be7-9e93-ba2125ef6f15	1335308606248	kn_Comment	0	true	0	0	0	I think this link is bullshit	
+67ed99b7-44b3-4be7-9e93-ba2125ef6f16	1335408606248	kn_Comment	0	true	0	0	0	Your comment is unconstructive	
+67ed99b7-44b3-4be7-9e93-ba2125ef6f17	1335508606248	kn_Comment	0	true	0	0	0	I support this idea, I wish I had it myself	
+67ed99b7-44b3-4be7-9e93-ba2125ef6f18	1335608606248	kn_Comment	0	true	0	0	0	i'm a smartass	
+99ed99b7-44b3-4be7-9e93-ba2125ef6f18	1335608606248	kn_Comment	0	true	0	0	0	i'm a smartass 2	
